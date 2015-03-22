@@ -12,3 +12,10 @@ web:
     - db
   volumes:
     - .:/myapp
+  volumes_from:
+    - bundle
+
+bundle:
+  image: myapp_web
+  volumes:
+    - /bundle
